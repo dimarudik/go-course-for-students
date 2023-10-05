@@ -52,13 +52,12 @@ func TestTopN(t *testing.T) {
 		//fmt.Println("{} {}", topN, tc)
 		assert.Len(t, topN, n)
 
-		/*		for i, el := range topN {
-					value := size - i - 1
-					tagName := fmt.Sprintf("%d", value)
-					assert.Equal(t, tagName, el.Tag, "TopN(%d) returned elements in wrong order (bad tag name at %d): %v", n, i, topN)
-					assert.Equal(t, value, el.OccurrenceCount, "TopN(%d) returned elements in wrong order (bad occurrence count at %d): %v", n, i, topN)
-				}
-		*/
+		for i, el := range topN {
+			value := size - i - 1
+			tagName := fmt.Sprintf("%d", value)
+			assert.Equal(t, tagName, el.Tag, "TopN(%d) returned elements in wrong order (bad tag name at %d): %v", n, i, topN)
+			assert.Equal(t, value, el.OccurrenceCount, "TopN(%d) returned elements in wrong order (bad occurrence count at %d): %v", n, i, topN)
+		}
 	}
 
 	for i := 0; i < size; i++ {

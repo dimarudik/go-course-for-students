@@ -1,9 +1,5 @@
 package main
 
-type TagCloud struct {
-	tags map[string]int
-}
-
 func main() {
 	/*	var str string = "DDD"
 		var bytePointer1 *byte = unsafe.StringData(str)
