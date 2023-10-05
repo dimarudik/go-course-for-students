@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func DemonstrateArrayInitializers() {
-	return
+	//return
 	var a [3]int
 	fmt.Println("var a [3]int:", a)
 
